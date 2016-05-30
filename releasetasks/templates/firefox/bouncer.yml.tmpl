@@ -43,3 +43,14 @@
 
         extra:
             {{ common_extras(taskname=buildername, locales=["null"], platform="null") | indent(12)}}
+            treeherderEnv:
+                - staging
+            treeherder:
+                symbol: BSub
+                groupSymbol: Release
+                collection:
+                    opt: true
+                machine:
+                    platform: linux64
+                build:
+                    platform: all
